@@ -90,7 +90,9 @@ Serial.println("ID del clima"+String(weather_0_id));
 JsonObject& main = root["main"];
 float main_temp = main["temp"]; // 15.44
 Serial.println("Weather "+String(main_temp));
-
+String city = root ["name"];
+Serial.println(city);
+ 
 if(main_temp>=25.0){
   //SI ES MAYOR A 25° ENCIENDE LED ROJO
   digitalWrite(5,HIGH);
